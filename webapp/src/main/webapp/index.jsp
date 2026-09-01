@@ -2,13 +2,16 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Smart & Chuka Airways | Fly Beyond Expectations</title>
+    <title>SMART & CHUKA AIRWAYS | FLY BEYOND EXPECTATIONS</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -25,10 +28,13 @@
             color: #172033;
         }
 
-        /* NAVBAR */
+        /* =========================
+           NAVIGATION
+        ========================== */
+
         header {
-            background: #071a3d;
-            color: white;
+            background: #ffffff;
+            color: #071a3d;
             padding: 18px 7%;
             display: flex;
             justify-content: space-between;
@@ -36,50 +42,63 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 3px 15px rgba(0,0,0,.15);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 23px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #0066cc;
         }
 
         .logo span {
-            color: #f7b731;
+            color: #0066cc;
         }
 
         nav a {
-            color: white;
+            color: #071a3d;
             text-decoration: none;
             margin-left: 25px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         nav a:hover {
-            color: #f7b731;
+            color: #0066cc;
         }
 
         .btn {
-            background: #f7b731;
-            color: #071a3d;
+            background: #0066cc;
+            color: #ffffff;
             border: none;
             padding: 13px 22px;
             border-radius: 7px;
             cursor: pointer;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            background: #ffd66b;
+            background: #004c99;
+            transform: translateY(-2px);
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================== */
+
         .hero {
             min-height: 620px;
+
             background:
-                linear-gradient(rgba(4,18,46,.70), rgba(4,18,46,.72)),
+                linear-gradient(
+                    rgba(4, 18, 46, 0.70),
+                    rgba(4, 18, 46, 0.72)
+                ),
+
                 url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=85")
                 center/cover;
+
             display: flex;
             align-items: center;
             padding: 80px 7%;
@@ -97,7 +116,7 @@
         }
 
         .hero h1 span {
-            color: #f7b731;
+            color: #4da6ff;
         }
 
         .hero p {
@@ -106,7 +125,10 @@
             margin-bottom: 30px;
         }
 
-        /* SEARCH BOX */
+        /* =========================
+           FLIGHT SEARCH
+        ========================== */
+
         .search-box {
             background: white;
             color: #172033;
@@ -118,7 +140,7 @@
             width: 86%;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 10px 40px rgba(0,0,0,.18);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
         }
 
         .search-tabs {
@@ -129,8 +151,8 @@
         }
 
         .search-tabs span:first-child {
-            color: #0a4fa3;
-            border-bottom: 3px solid #f7b731;
+            color: #0066cc;
+            border-bottom: 3px solid #0066cc;
             padding-bottom: 8px;
         }
 
@@ -157,7 +179,15 @@
             outline: none;
         }
 
-        /* GENERAL */
+        .field input:focus,
+        .field select:focus {
+            border-color: #0066cc;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
         section {
             padding: 85px 7%;
         }
@@ -177,7 +207,10 @@
             color: #697386;
         }
 
-        /* DESTINATIONS */
+        /* =========================
+           DESTINATIONS
+        ========================== */
+
         .destinations {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -188,7 +221,13 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .destination:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .destination img {
@@ -210,7 +249,10 @@
             color: #697386;
         }
 
-        /* SERVICES */
+        /* =========================
+           SERVICES
+        ========================== */
+
         .services {
             background: #eef4fb;
         }
@@ -226,7 +268,12 @@
             padding: 30px 20px;
             text-align: center;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,.06);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
         }
 
         .service-icon {
@@ -244,7 +291,10 @@
             line-height: 1.5;
         }
 
-        /* BOOKING */
+        /* =========================
+           BOOKING
+        ========================== */
+
         .booking {
             background: white;
         }
@@ -255,6 +305,7 @@
             background: #f7f9fc;
             padding: 35px;
             border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
         }
 
         .form-grid {
@@ -275,13 +326,22 @@
             padding: 14px;
             border: 1px solid #ccd3df;
             border-radius: 7px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #0066cc;
         }
 
         .full {
             grid-column: 1 / -1;
         }
 
-        /* PAYMENT */
+        /* =========================
+           PAYMENT
+        ========================== */
+
         .payment {
             background: #071a3d;
             color: white;
@@ -294,6 +354,7 @@
             color: #172033;
             padding: 35px;
             border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
         }
 
         .payment-methods {
@@ -309,10 +370,12 @@
             border-radius: 8px;
             text-align: center;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .payment-method:hover {
-            border-color: #f7b731;
+            border-color: #0066cc;
+            background: #f0f7ff;
         }
 
         .payment-form {
@@ -324,9 +387,17 @@
             padding: 14px;
             border: 1px solid #ccd3df;
             border-radius: 7px;
+            outline: none;
         }
 
-        /* CONFIRMATION */
+        .payment-form input:focus {
+            border-color: #0066cc;
+        }
+
+        /* =========================
+           CONFIRMATION
+        ========================== */
+
         .confirmation {
             display: none;
             max-width: 700px;
@@ -336,6 +407,7 @@
             border: 1px solid #9bd4ad;
             border-radius: 12px;
             text-align: center;
+            color: #172033;
         }
 
         .confirmation h3 {
@@ -343,7 +415,10 @@
             margin-bottom: 10px;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================== */
+
         footer {
             background: #04132d;
             color: white;
@@ -358,7 +433,7 @@
 
         footer h3 {
             margin-bottom: 18px;
-            color: #f7b731;
+            color: #4da6ff;
         }
 
         footer p,
@@ -366,6 +441,10 @@
             color: #bdc7d8;
             line-height: 2;
             text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
         }
 
         .copyright {
@@ -376,8 +455,12 @@
             color: #9aa8bd;
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================== */
+
         @media(max-width: 900px) {
+
             nav {
                 display: none;
             }
@@ -395,9 +478,11 @@
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
         }
 
         @media(max-width: 600px) {
+
             .search-grid,
             .destinations,
             .service-grid,
@@ -419,132 +504,245 @@
                 width: 92%;
                 margin-top: -50px;
             }
+
+            .logo {
+                font-size: 17px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
 <header>
+
     <div class="logo">
-        ✈ Smart <span>&</span> Chuka Airways
+        SMART <span>&</span> CHUKA AIRWAYS
     </div>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#destinations">Destinations</a>
-        <a href="#services">Services</a>
-        <a href="#booking">Book Flight</a>
-        <a href="#payment">Payment</a>
+
+        <a href="#home">HOME</a>
+
+        <a href="#destinations">DESTINATIONS</a>
+
+        <a href="#services">SERVICES</a>
+
+        <a href="#booking">BOOK FLIGHT</a>
+
+        <a href="#payment">PAYMENT</a>
+
     </nav>
 
-    <button class="btn" onclick="location.href='#booking'">
-        Book Now
+    <button class="btn"
+            onclick="location.href='#booking'">
+
+        BOOK NOW
+
     </button>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO SECTION
+====================================================== -->
+
 <section class="hero" id="home">
+
     <div class="hero-content">
+
         <h1>
-            Fly <span>Beyond</span><br>
-            Expectations
+
+            FLY <span>BEYOND</span><br>
+
+            EXPECTATIONS
+
         </h1>
 
         <p>
-            Welcome to Smart & Chuka Airways.
-            Experience safe, comfortable and reliable
-            journeys connecting you to the world.
+
+            WELCOME TO SMART & CHUKA AIRWAYS.
+
+            EXPERIENCE SAFE, COMFORTABLE AND RELIABLE
+            JOURNEYS CONNECTING YOU TO THE WORLD.
+
         </p>
 
-        <button class="btn" onclick="location.href='#booking'">
-            Start Your Journey
+        <button class="btn"
+                onclick="location.href='#booking'">
+
+            START YOUR JOURNEY
+
         </button>
+
     </div>
+
 </section>
 
 
-<!-- FLIGHT SEARCH -->
+<!-- =====================================================
+     FLIGHT SEARCH
+====================================================== -->
+
 <div class="search-box">
 
     <div class="search-tabs">
-        <span>Round Trip</span>
-        <span>One Way</span>
-        <span>Multi-City</span>
+
+        <span>ROUND TRIP</span>
+
+        <span>ONE WAY</span>
+
+        <span>MULTI-CITY</span>
+
     </div>
+
 
     <div class="search-grid">
 
         <div class="field">
+
             <label>FROM</label>
-            <input type="text" placeholder="Lagos (LOS)">
+
+            <input type="text"
+                   placeholder="LAGOS (LOS)">
+
         </div>
 
+
         <div class="field">
+
             <label>TO</label>
-            <input type="text" placeholder="London (LHR)">
+
+            <input type="text"
+                   placeholder="LONDON (LHR)">
+
         </div>
 
+
         <div class="field">
+
             <label>DEPARTURE</label>
+
             <input type="date">
+
         </div>
+
 
         <div class="field">
+
             <label>PASSENGERS</label>
+
             <select>
-                <option>1 Passenger</option>
-                <option>2 Passengers</option>
-                <option>3 Passengers</option>
-                <option>4 Passengers</option>
+
+                <option>1 PASSENGER</option>
+
+                <option>2 PASSENGERS</option>
+
+                <option>3 PASSENGERS</option>
+
+                <option>4 PASSENGERS</option>
+
+                <option>5 PASSENGERS</option>
+
             </select>
+
         </div>
 
-        <button class="btn" onclick="searchFlight()">
-            Search Flights
+
+        <button class="btn"
+                onclick="searchFlight()">
+
+            SEARCH FLIGHTS
+
         </button>
 
     </div>
+
 </div>
 
 
-<!-- DESTINATIONS -->
+<!-- =====================================================
+     DESTINATIONS
+====================================================== -->
+
 <section id="destinations">
 
     <div class="section-title">
-        <h2>Popular Destinations</h2>
-        <p>Discover amazing places with Smart & Chuka Airways.</p>
+
+        <h2>POPULAR DESTINATIONS</h2>
+
+        <p>
+            DISCOVER AMAZING PLACES WITH
+            SMART & CHUKA AIRWAYS.
+        </p>
+
     </div>
+
 
     <div class="destinations">
 
+
         <div class="destination">
-            <img src="https://images.unsplash.com/photo-1578002570438-9d2f7a2c8e5f?auto=format&fit=crop&w=900&q=80">
+
+            <img
+                src="https://images.unsplash.com/photo-1578002570438-9d2f7a2c8e5f?auto=format&fit=crop&w=900&q=80">
 
             <div class="destination-content">
-                <h3>🇳🇬 Lagos, Nigeria</h3>
-                <p>Experience the energy and culture of Lagos.</p>
+
+                <h3>🇳🇬 LAGOS, NIGERIA</h3>
+
+                <p>
+                    EXPERIENCE THE ENERGY AND CULTURE OF LAGOS.
+                </p>
+
             </div>
+
         </div>
 
+
         <div class="destination">
-            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80">
+
+            <img
+                src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80">
 
             <div class="destination-content">
-                <h3>🇬🇧 London, UK</h3>
-                <p>Explore one of the world's greatest cities.</p>
+
+                <h3>🇬🇧 LONDON, UK</h3>
+
+                <p>
+                    EXPLORE ONE OF THE WORLD'S GREATEST CITIES.
+                </p>
+
             </div>
+
         </div>
 
+
         <div class="destination">
-            <img src="https://images.unsplash.com/photo-1496588152823-86ff7695e68f?auto=format&fit=crop&w=900&q=80">
+
+            <img
+                src="https://images.unsplash.com/photo-1496588152823-86ff7695e68f?auto=format&fit=crop&w=900&q=80">
 
             <div class="destination-content">
-                <h3>🇦🇪 Dubai, UAE</h3>
-                <p>Luxury, adventure and unforgettable experiences.</p>
+
+                <h3>🇦🇪 DUBAI, UAE</h3>
+
+                <p>
+                    LUXURY, ADVENTURE AND UNFORGETTABLE EXPERIENCES.
+                </p>
+
             </div>
+
         </div>
 
     </div>
@@ -552,46 +750,79 @@
 </section>
 
 
-<!-- SERVICES -->
+<!-- =====================================================
+     SERVICES
+====================================================== -->
+
 <section class="services" id="services">
 
     <div class="section-title">
-        <h2>Why Fly With Us?</h2>
-        <p>Everything you need for a comfortable journey.</p>
+
+        <h2>WHY FLY WITH US?</h2>
+
+        <p>
+            EVERYTHING YOU NEED FOR A COMFORTABLE JOURNEY.
+        </p>
+
     </div>
+
 
     <div class="service-grid">
 
+
         <div class="service">
+
             <div class="service-icon">✈️</div>
-            <h3>Safe Flights</h3>
+
+            <h3>SAFE FLIGHTS</h3>
+
             <p>
-                Your safety is our highest priority on every journey.
+                YOUR SAFETY IS OUR HIGHEST PRIORITY
+                ON EVERY JOURNEY.
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-icon">💺</div>
-            <h3>Comfort</h3>
+
+            <h3>COMFORT</h3>
+
             <p>
-                Enjoy comfortable seating and a pleasant flying experience.
+                ENJOY COMFORTABLE SEATING AND A
+                PLEASANT FLYING EXPERIENCE.
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-icon">🧳</div>
-            <h3>Baggage</h3>
+
+            <h3>BAGGAGE</h3>
+
             <p>
-                Generous baggage allowances for your travel needs.
+                GENEROUS BAGGAGE ALLOWANCES FOR
+                YOUR TRAVEL NEEDS.
             </p>
+
         </div>
 
+
         <div class="service">
+
             <div class="service-icon">🌍</div>
-            <h3>Global Network</h3>
+
+            <h3>GLOBAL NETWORK</h3>
+
             <p>
-                Connect to exciting destinations around the world.
+                CONNECT TO EXCITING DESTINATIONS
+                AROUND THE WORLD.
             </p>
+
         </div>
 
     </div>
@@ -599,13 +830,22 @@
 </section>
 
 
-<!-- BOOKING -->
+<!-- =====================================================
+     BOOKING
+====================================================== -->
+
 <section class="booking" id="booking">
 
     <div class="section-title">
-        <h2>Book Your Flight</h2>
-        <p>Complete the form below to reserve your seat.</p>
+
+        <h2>BOOK YOUR FLIGHT</h2>
+
+        <p>
+            COMPLETE THE FORM BELOW TO RESERVE YOUR SEAT.
+        </p>
+
     </div>
+
 
     <div class="booking-container">
 
@@ -613,70 +853,141 @@
 
             <div class="form-grid">
 
-                <div class="form-group">
-                    <label>First Name</label>
-                    <input type="text" id="firstName" required>
-                </div>
 
                 <div class="form-group">
-                    <label>Last Name</label>
-                    <input type="text" id="lastName" required>
+
+                    <label>FIRST NAME</label>
+
+                    <input type="text"
+                           id="firstName"
+                           required>
+
                 </div>
 
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="email" required>
-                </div>
 
                 <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" required>
+
+                    <label>LAST NAME</label>
+
+                    <input type="text"
+                           id="lastName"
+                           required>
+
                 </div>
 
+
                 <div class="form-group">
-                    <label>Departure City</label>
+
+                    <label>EMAIL ADDRESS</label>
+
+                    <input type="email"
+                           id="email"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>PHONE NUMBER</label>
+
+                    <input type="tel"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>DEPARTURE CITY</label>
+
                     <select required>
-                        <option value="">Select City</option>
-                        <option>Lagos</option>
-                        <option>Abuja</option>
-                        <option>Port Harcourt</option>
-                        <option>London</option>
-                        <option>Dubai</option>
-                        <option>New York</option>
+
+                        <option value="">
+                            SELECT CITY
+                        </option>
+
+                        <option>LAGOS</option>
+
+                        <option>ABUJA</option>
+
+                        <option>PORT HARCOURT</option>
+
+                        <option>LONDON</option>
+
+                        <option>DUBAI</option>
+
+                        <option>NEW YORK</option>
+
                     </select>
+
                 </div>
 
+
                 <div class="form-group">
-                    <label>Destination</label>
+
+                    <label>DESTINATION</label>
+
                     <select required>
-                        <option value="">Select Destination</option>
-                        <option>Lagos</option>
-                        <option>Abuja</option>
-                        <option>London</option>
-                        <option>Dubai</option>
-                        <option>New York</option>
+
+                        <option value="">
+                            SELECT DESTINATION
+                        </option>
+
+                        <option>LAGOS</option>
+
+                        <option>ABUJA</option>
+
+                        <option>LONDON</option>
+
+                        <option>DUBAI</option>
+
+                        <option>NEW YORK</option>
+
                     </select>
+
                 </div>
 
-                <div class="form-group">
-                    <label>Departure Date</label>
-                    <input type="date" required>
-                </div>
 
                 <div class="form-group">
-                    <label>Travel Class</label>
+
+                    <label>DEPARTURE DATE</label>
+
+                    <input type="date"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>TRAVEL CLASS</label>
+
                     <select>
-                        <option>Economy</option>
-                        <option>Premium Economy</option>
-                        <option>Business Class</option>
-                        <option>First Class</option>
+
+                        <option>ECONOMY</option>
+
+                        <option>PREMIUM ECONOMY</option>
+
+                        <option>BUSINESS CLASS</option>
+
+                        <option>FIRST CLASS</option>
+
                     </select>
+
                 </div>
+
 
                 <div class="form-group full">
-                    <button type="button" class="btn" onclick="createBooking()">
-                        Continue to Payment →
+
+                    <button type="button"
+                            class="btn"
+                            onclick="createBooking()">
+
+                        CONTINUE TO PAYMENT →
+
                     </button>
+
                 </div>
 
             </div>
@@ -688,48 +999,91 @@
 </section>
 
 
-<!-- PAYMENT -->
+<!-- =====================================================
+     PAYMENT
+====================================================== -->
+
 <section class="payment" id="payment">
 
     <div class="section-title">
-        <h2 style="color:white;">Secure Payment</h2>
+
+        <h2 style="color:white;">
+            SECURE PAYMENT
+        </h2>
+
         <p style="color:#c8d2e2;">
-            Choose your preferred payment method.
+
+            CHOOSE YOUR PREFERRED PAYMENT METHOD.
+
         </p>
+
     </div>
+
 
     <div class="payment-container">
 
-        <h3>Payment Method</h3>
+        <h3>PAYMENT METHOD</h3>
+
 
         <div class="payment-methods">
 
-            <div class="payment-method" onclick="selectPayment('card')">
-                💳<br>
-                Card
+
+            <div class="payment-method"
+                 onclick="selectPayment('card')">
+
+                💳
+
+                <br>
+
+                CARD
+
             </div>
 
-            <div class="payment-method" onclick="selectPayment('bank')">
-                🏦<br>
-                Bank Transfer
+
+            <div class="payment-method"
+                 onclick="selectPayment('bank')">
+
+                🏦
+
+                <br>
+
+                BANK TRANSFER
+
             </div>
 
-            <div class="payment-method" onclick="selectPayment('mobile')">
-                📱<br>
-                Mobile Payment
+
+            <div class="payment-method"
+                 onclick="selectPayment('mobile')">
+
+                📱
+
+                <br>
+
+                MOBILE PAYMENT
+
             </div>
 
         </div>
 
-        <div id="cardPayment" class="payment-form">
+
+        <!-- CARD PAYMENT -->
+
+        <div id="cardPayment"
+             class="payment-form">
 
             <input type="text"
-                   placeholder="Cardholder Name">
+                   placeholder="CARDHOLDER NAME">
+
 
             <input type="text"
-                   placeholder="Card Number">
+                   placeholder="CARD NUMBER">
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+
+            <div style="
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                gap:10px;
+            ">
 
                 <input type="text"
                        placeholder="MM/YY">
@@ -739,45 +1093,70 @@
 
             </div>
 
-            <button class="btn" onclick="processPayment()">
-                Pay & Confirm Booking
+
+            <button class="btn"
+                    onclick="processPayment()">
+
+                PAY & CONFIRM BOOKING
+
             </button>
 
         </div>
+
+
+        <!-- BANK TRANSFER -->
 
         <div id="bankPayment"
              class="payment-form"
              style="display:none;">
 
             <p>
-                <strong>Bank:</strong> Smart & Chuka Bank
+
+                <strong>BANK:</strong>
+                SMART & CHUKA BANK
+
             </p>
 
             <p>
-                <strong>Account Name:</strong>
-                Smart & Chuka Airways
+
+                <strong>ACCOUNT NAME:</strong>
+                SMART & CHUKA AIRWAYS
+
             </p>
 
             <p>
-                <strong>Account Number:</strong>
+
+                <strong>ACCOUNT NUMBER:</strong>
                 0000000000
+
             </p>
 
-            <button class="btn" onclick="processPayment()">
-                I Have Made Payment
+
+            <button class="btn"
+                    onclick="processPayment()">
+
+                I HAVE MADE PAYMENT
+
             </button>
 
         </div>
+
+
+        <!-- MOBILE PAYMENT -->
 
         <div id="mobilePayment"
              class="payment-form"
              style="display:none;">
 
             <input type="tel"
-                   placeholder="Mobile Payment Number">
+                   placeholder="MOBILE PAYMENT NUMBER">
 
-            <button class="btn" onclick="processPayment()">
-                Continue Payment
+
+            <button class="btn"
+                    onclick="processPayment()">
+
+                CONTINUE PAYMENT
+
             </button>
 
         </div>
@@ -785,23 +1164,33 @@
     </div>
 
 
-    <div class="confirmation" id="confirmation">
+    <!-- BOOKING CONFIRMATION -->
 
-        <h3>✓ Booking Confirmed!</h3>
+    <div class="confirmation"
+         id="confirmation">
+
+        <h3>
+            ✓ BOOKING CONFIRMED!
+        </h3>
 
         <p>
-            Thank you for choosing Smart & Chuka Airways.
+            THANK YOU FOR CHOOSING
+            SMART & CHUKA AIRWAYS.
         </p>
 
         <br>
 
         <p>
-            Your booking reference is:
+
+            YOUR BOOKING REFERENCE IS:
+
             <strong id="bookingReference"></strong>
+
         </p>
 
         <p>
-            A confirmation will be sent to your email address.
+            A CONFIRMATION WILL BE SENT
+            TO YOUR EMAIL ADDRESS.
         </p>
 
     </div>
@@ -809,68 +1198,140 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
 <footer>
 
     <div class="footer-grid">
 
+
         <div>
-            <h3>Smart & Chuka Airways</h3>
+
+            <h3>
+                SMART & CHUKA AIRWAYS
+            </h3>
 
             <p>
-                Connecting people, businesses and destinations
-                across the world.
+                CONNECTING PEOPLE, BUSINESSES
+                AND DESTINATIONS ACROSS THE WORLD.
             </p>
 
             <p>
-                Fly smart. Fly comfortable. Fly with us.
+                FLY SMART. FLY COMFORTABLE.
+                FLY WITH US.
             </p>
+
         </div>
 
-        <div>
-            <h3>Company</h3>
 
-            <p><a href="#home">About Us</a></p>
-            <p><a href="#services">Our Services</a></p>
-            <p><a href="#destinations">Destinations</a></p>
+        <div>
+
+            <h3>COMPANY</h3>
+
+            <p>
+                <a href="#home">
+                    ABOUT US
+                </a>
+            </p>
+
+            <p>
+                <a href="#services">
+                    OUR SERVICES
+                </a>
+            </p>
+
+            <p>
+                <a href="#destinations">
+                    DESTINATIONS
+                </a>
+            </p>
+
         </div>
 
-        <div>
-            <h3>Support</h3>
 
-            <p><a href="#">Contact Us</a></p>
-            <p><a href="#">Manage Booking</a></p>
-            <p><a href="#">Baggage Information</a></p>
+        <div>
+
+            <h3>SUPPORT</h3>
+
+            <p>
+                <a href="#">
+                    CONTACT US
+                </a>
+            </p>
+
+            <p>
+                <a href="#">
+                    MANAGE BOOKING
+                </a>
+            </p>
+
+            <p>
+                <a href="#">
+                    BAGGAGE INFORMATION
+                </a>
+            </p>
+
         </div>
 
-        <div>
-            <h3>Contact</h3>
 
-            <p>📞 +234 800 SMART AIR</p>
-            <p>✉️ info@smartchukaairways.com</p>
-            <p>📍 Lagos, Nigeria</p>
+        <div>
+
+            <h3>CONTACT</h3>
+
+            <p>
+                📞 +234 800 SMART AIR
+            </p>
+
+            <p>
+                ✉️ INFO@SMARTCHUKAAIRWAYS.COM
+            </p>
+
+            <p>
+                📍 LAGOS, NIGERIA
+            </p>
+
         </div>
 
     </div>
 
+
     <div class="copyright">
-        © 2026 Smart & Chuka Airways. All Rights Reserved.
+
+        © 2026 SMART & CHUKA AIRWAYS.
+        ALL RIGHTS RESERVED.
+
     </div>
 
 </footer>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
 <script>
+
+
+    /* =========================
+       SEARCH FLIGHTS
+    ========================== */
 
     function searchFlight() {
 
         alert(
-            "Searching available flights...\\n\\n" +
-            "Please wait while we find the best flights for you."
+            "SEARCHING AVAILABLE FLIGHTS...\n\n" +
+            "PLEASE WAIT WHILE WE FIND THE BEST " +
+            "FLIGHT OPTIONS FOR YOU."
         );
 
     }
 
+
+    /* =========================
+       CREATE BOOKING
+    ========================== */
 
     function createBooking() {
 
@@ -883,31 +1344,47 @@
         const email =
             document.getElementById("email").value;
 
+
         if (!firstName || !lastName || !email) {
 
-            alert("Please complete the required passenger information.");
+            alert(
+                "PLEASE COMPLETE THE REQUIRED " +
+                "PASSENGER INFORMATION."
+            );
 
             return;
+
         }
 
+
         alert(
-            "Passenger information saved successfully!\\n\\n" +
-            "Please complete your payment."
+            "PASSENGER INFORMATION SAVED SUCCESSFULLY!\n\n" +
+            "PLEASE COMPLETE YOUR PAYMENT."
         );
 
+
         document.getElementById("payment")
-            .scrollIntoView();
+            .scrollIntoView({
+                behavior: "smooth"
+            });
 
     }
 
 
+    /* =========================
+       PAYMENT SELECTION
+    ========================== */
+
     function selectPayment(method) {
+
 
         document.getElementById("cardPayment")
             .style.display = "none";
 
+
         document.getElementById("bankPayment")
             .style.display = "none";
+
 
         document.getElementById("mobilePayment")
             .style.display = "none";
@@ -920,12 +1397,14 @@
 
         }
 
+
         if (method === "bank") {
 
             document.getElementById("bankPayment")
                 .style.display = "grid";
 
         }
+
 
         if (method === "mobile") {
 
@@ -937,29 +1416,43 @@
     }
 
 
+    /* =========================
+       PROCESS PAYMENT
+    ========================== */
+
     function processPayment() {
 
+
         const reference =
+
             "SCA-" +
+
             Math.random()
                 .toString(36)
                 .substring(2, 8)
                 .toUpperCase();
 
+
         document.getElementById("bookingReference")
             .innerText = reference;
+
 
         document.getElementById("confirmation")
             .style.display = "block";
 
+
         document.getElementById("confirmation")
-            .scrollIntoView();
+            .scrollIntoView({
+                behavior: "smooth"
+            });
 
     }
 
 </script>
 
+
 </body>
+
 </html>
 ```
 
