@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Cloning repository...'
-                git 'https://github.com/RayItern/Artifact-build-image.git'
+                git 'https://github.com/mercykola/Artifact-build-image2.git'
             }
         }
 
