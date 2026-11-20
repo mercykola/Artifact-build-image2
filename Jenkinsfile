@@ -42,7 +42,7 @@ pipeline {
             echo 'Pipeline execution completed.'
         }
         success {
-            echo 'Build successful by Chuka and Smart Team!'
+            echo 'Build successful by Mercy and Moyin!'
         }
         failure {
             echo 'Build failed!'
